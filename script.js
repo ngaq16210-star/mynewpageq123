@@ -1,3 +1,11 @@
+// Loading Animation
+window.addEventListener('load', () => {
+    const loading = document.getElementById('loading');
+    setTimeout(() => {
+        loading.classList.add('hidden');
+    }, 1000);
+});
+
 // Theme Toggle Functionality
 const themeToggle = document.getElementById('theme-toggle');
 const body = document.body;
@@ -15,6 +23,43 @@ themeToggle.addEventListener('click', () => {
     const theme = body.classList.contains('dark-mode') ? 'dark' : 'light';
     localStorage.setItem('theme', theme);
     icon.textContent = theme === 'dark' ? '☀️' : '🌙';
+});
+
+// Scroll Progress Bar
+window.addEventListener('scroll', () => {
+    const scrollTop = window.pageYOffset;
+    const docHeight = document.body.offsetHeight - window.innerHeight;
+    const scrollPercent = (scrollTop / docHeight) * 100;
+    document.getElementById('scroll-progress').style.width = scrollPercent + '%';
+});
+
+// Floating Particles
+function createParticles() {
+    const particlesContainer = document.getElementById('particles');
+    const particleCount = 20;
+
+    for (let i = 0; i < particleCount; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'particle';
+        particle.style.left = Math.random() * 100 + '%';
+        particle.style.top = Math.random() * 100 + '%';
+        particle.style.width = Math.random() * 6 + 2 + 'px';
+        particle.style.height = particle.style.width;
+        particle.style.animationDelay = Math.random() * 6 + 's';
+        particlesContainer.appendChild(particle);
+    }
+}
+
+createParticles();
+
+// Cursor Glow Effect
+const cursorGlow = document.createElement('div');
+cursorGlow.id = 'cursor-glow';
+document.body.appendChild(cursorGlow);
+
+document.addEventListener('mousemove', (e) => {
+    cursorGlow.style.left = e.clientX - 10 + 'px';
+    cursorGlow.style.top = e.clientY - 10 + 'px';
 });
 
 // Fade-in Animation on Scroll

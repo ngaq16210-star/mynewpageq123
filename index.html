@@ -10,6 +10,23 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Loading Animation -->
+    <div id="loading">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <!-- Scroll Progress Bar -->
+    <div id="scroll-progress"></div>
+
+    <!-- Floating Particles -->
+    <div id="particles"></div>
+
+    <!-- Background Animation -->
+    <div class="background-animation">
+        <div class="pet dog"></div>
+        <div class="pet cat"></div>
+    </div>
+
     <header class="header">
         <div class="container">
             <div class="logo">Quỳnh Nga</div>
@@ -32,12 +49,10 @@
         <section id="home" class="hero">
             <div class="container">
                 <div class="hero-content">
-                    <div class="hero-image">
-                        <img src="https://via.placeholder.com/300x300/cccccc/000000?text=Avatar" alt="Nguyễn Thị Quỳnh Nga">
-                    </div>
                     <div class="hero-text">
                         <h1>Xin chào, tôi là <span class="highlight">Nguyễn Thị Quỳnh Nga</span></h1>
-                        <p class="subtitle">Sinh viên CNTT - Đồ họa kỹ thuật số</p>
+                        <p class="subtitle">Sinh viên khoa CNTT - Đồ họa kỹ thuật số</p>
+                        <p class="slogan">"Thiết kế bằng cảm xúc – phát triển bằng công nghệ."</p>
                         <div class="hero-buttons">
                             <a href="#projects" class="btn btn-primary">Xem dự án</a>
                             <a href="#contact" class="btn btn-secondary">Liên hệ</a>
@@ -51,25 +66,26 @@
             <div class="container">
                 <h2>About Me</h2>
                 <div class="about-content">
+                    <div class="about-image">
+                        <img src="https://via.placeholder.com/300x300/cccccc/000000?text=Avatar" alt="Nguyễn Thị Quỳnh Nga">
+                    </div>
                     <div class="about-text">
                         <p>Là sinh viên yêu thích công nghệ, thiết kế giao diện và sáng tạo hình ảnh kỹ thuật số. Đam mê học hỏi UI/UX, phát triển web và xây dựng các sản phẩm hiện đại.</p>
-                    </div>
-                    <div class="about-interests">
-                        <h3>Sở thích</h3>
-                        <div class="interests-grid">
-                            <div class="interest-item">
-                                <span class="interest-icon">🎵</span>
-                                <span>Nghe nhạc</span>
-                            </div>
-                            <div class="interest-item">
-                                <span class="interest-icon">✈️</span>
-                                <span>Du lịch</span>
-                            </div>
-                            <div class="interest-item">
-                                <span class="interest-icon">🎬</span>
-                                <span>Xem phim</span>
-                            </div>
-                        </div>
+                        <h3>Định hướng nghề nghiệp</h3>
+                        <ul class="career-goals">
+                            <li>UI/UX Design</li>
+                            <li>Front-end Development</li>
+                            <li>Digital Creative</li>
+                        </ul>
+                        <h3>Kỹ năng chính</h3>
+                        <ul class="skills-list">
+                            <li>HTML/CSS</li>
+                            <li>UI/UX Design</li>
+                            <li>Figma</li>
+                            <li>Photoshop</li>
+                            <li>Illustrator</li>
+                            <li>AI Design Tools</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -77,42 +93,63 @@
 
         <section id="skills" class="skills">
             <div class="container">
-                <h2>Skills</h2>
-                <div class="skills-grid">
-                    <div class="skill-item">
-                        <div class="skill-name">HTML</div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 90%"></div>
+                <h2>Skills & Experience</h2>
+                <div class="skills-content">
+                    <div class="skill-bars">
+                        <div class="skill-item">
+                            <div class="skill-name">HTML/CSS</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">JavaScript</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">UI/UX Design</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">Figma</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 88%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">Graphic Design</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 82%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">AI Creative Tools</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 75%"></div>
+                            </div>
                         </div>
                     </div>
-                    <div class="skill-item">
-                        <div class="skill-name">CSS</div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 85%"></div>
+                    <div class="experience-timeline">
+                        <h3>Kinh nghiệm</h3>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>2023 - Hiện tại</h4>
+                                <p>Sinh viên CNTT - Đồ họa kỹ thuật số</p>
+                                <p>Học tập và thực hành các kỹ năng thiết kế và phát triển web.</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-name">JavaScript</div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 80%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-name">UI/UX Design</div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 75%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-name">Photoshop</div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 85%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-name">Illustrator</div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 80%"></div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>2022 - 2023</h4>
+                                <p>Dự án cá nhân</p>
+                                <p>Thiết kế và phát triển các dự án portfolio cá nhân.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -124,27 +161,30 @@
                 <h2>Projects</h2>
                 <div class="projects-grid">
                     <div class="project-card">
-                        <img src="https://via.placeholder.com/400x250/4a90e2/ffffff?text=AI+Project" alt="AI Project">
+                        <img src="https://via.placeholder.com/400x250/8B4513/FFFFFF?text=AI+Creative+Design" alt="AI Creative Design">
                         <div class="project-content">
-                            <h3>AI Project</h3>
-                            <p>Dự án về trí tuệ nhân tạo, tập trung vào ứng dụng thực tế.</p>
-                            <a href="#" class="btn btn-small">View Project</a>
+                            <h3>AI Creative Design</h3>
+                            <p>Dự án sử dụng AI để tạo ra các thiết kế sáng tạo và hiện đại.</p>
+                            <p class="role">Vai trò: UI/UX Designer</p>
+                            <a href="#" class="btn btn-small">Xem chi tiết</a>
                         </div>
                     </div>
                     <div class="project-card">
-                        <img src="https://via.placeholder.com/400x250/50c878/ffffff?text=5G+Technology" alt="5G Technology">
+                        <img src="https://via.placeholder.com/400x250/DAA520/FFFFFF?text=5G+Technology+Website" alt="5G Technology Website">
                         <div class="project-content">
-                            <h3>5G Technology</h3>
-                            <p>Nghiên cứu và thiết kế về công nghệ 5G hiện đại.</p>
-                            <a href="#" class="btn btn-small">View Project</a>
+                            <h3>5G Technology Website</h3>
+                            <p>Thiết kế website giới thiệu công nghệ 5G với giao diện tương lai.</p>
+                            <p class="role">Vai trò: Front-end Developer</p>
+                            <a href="#" class="btn btn-small">Xem chi tiết</a>
                         </div>
                     </div>
                     <div class="project-card">
-                        <img src="https://via.placeholder.com/400x250/ff6b6b/ffffff?text=6G+Future+Concept" alt="6G Future Concept">
+                        <img src="https://via.placeholder.com/400x250/CD853F/FFFFFF?text=6G+Future+Interface" alt="6G Future Interface">
                         <div class="project-content">
-                            <h3>6G Future Concept</h3>
-                            <p>Khái niệm tương lai về công nghệ 6G và ứng dụng.</p>
-                            <a href="#" class="btn btn-small">View Project</a>
+                            <h3>6G Future Interface</h3>
+                            <p>Khái niệm giao diện tương lai cho công nghệ 6G.</p>
+                            <p class="role">Vai trò: Digital Creative</p>
+                            <a href="#" class="btn btn-small">Xem chi tiết</a>
                         </div>
                     </div>
                 </div>
@@ -170,10 +210,14 @@
                         </div>
                         <button type="submit" class="btn btn-primary">Gửi</button>
                     </form>
-                    <div class="social-links">
-                        <a href="#" class="social-link">Facebook</a>
-                        <a href="#" class="social-link">GitHub</a>
-                        <a href="#" class="social-link">Instagram</a>
+                    <div class="contact-info">
+                        <h3>Kết nối với tôi</h3>
+                        <div class="social-links">
+                            <a href="#" class="social-link">Facebook</a>
+                            <a href="#" class="social-link">GitHub</a>
+                            <a href="mailto:nga@example.com" class="social-link">Email</a>
+                        </div>
+                        <p class="cta">"Hãy cùng nhau tạo nên những trải nghiệm số đầy cảm hứng."</p>
                     </div>
                 </div>
             </div>
